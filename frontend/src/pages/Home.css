@@ -1,0 +1,113 @@
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: white;
+  padding: 4rem 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero__search {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 560px;
+  flex-wrap: wrap;
+}
+
+.hero__search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-text);
+}
+
+.hero__search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.home__search-info {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.home__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 0;
+  color: var(--color-text-muted);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.home__error {
+  text-align: center;
+  padding: 3rem;
+  color: var(--color-danger);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home__empty {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0 3rem;
+}
+
+.pagination__info {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
