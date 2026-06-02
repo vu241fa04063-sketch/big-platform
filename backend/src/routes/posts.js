@@ -138,7 +138,7 @@ router.post(
     body('title').trim().isLength({ min: 3, max: 255 }).withMessage('Title must be 3–255 characters.'),
     body('content').trim().notEmpty().withMessage('Content is required.'),
     body('published').optional().isBoolean(),
-    body('coverImage').optional().isURL().withMessage('Cover image must be a valid URL.'),
+    body('coverImage').optional().trim(),
     body('excerpt').optional().trim().isLength({ max: 500 }),
   ],
   async (req, res, next) => {
@@ -179,7 +179,7 @@ router.put(
     body('title').optional().trim().isLength({ min: 3, max: 255 }),
     body('content').optional().trim().notEmpty(),
     body('published').optional().isBoolean(),
-    body('coverImage').optional().isURL(),
+    body('coverImage').optional().trim(),
     body('excerpt').optional().trim().isLength({ max: 500 }),
   ],
   async (req, res, next) => {
